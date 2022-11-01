@@ -1,5 +1,7 @@
 module.exports = {
-  defaultCommandTimeout: 90000,
+  defaultCommandTimeout: 30000,
+  projectId: "tog3xb",
+  chromeWebSecurity: false,
   e2e: {
     baseUrl: 'https://app.pitch.com',
     setupNodeEvents(on, config) {

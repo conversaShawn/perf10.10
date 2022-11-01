@@ -7,6 +7,7 @@ describe('Tests', () => {
   }
 
   beforeEach(() => {
+    cy.clearCookies()
     cy.visit('/')
     cy.get('.passwordless-continue-password a').click()
     cy.get('[type=email]').type('helena+cy1@pitch.io')
@@ -58,7 +59,7 @@ describe('Tests', () => {
     cy.get('.title-bar-headline-secondary').should('be.visible').and('have.text', newName)
   })
 
-  it('test 4', () => {
+  it.skip('test 4', () => {
     const subscribedAllLabel = 'Subscribed to all'
     const notificationsLabel = 'Email preferences'
     openAccountSettingsFromDashboard()
